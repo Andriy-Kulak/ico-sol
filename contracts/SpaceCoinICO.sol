@@ -14,7 +14,6 @@ error IncorrectWithdrawal(uint256 maxPossibleWithdrawal);
 /// @dev Goal is to distribute 500k tokens and raise at least 30k eth with different phases in place
 contract SpaceCoinICO {
     address public admin;
-    address public treasury;
     Status public phaseStatus;
     bool public isPaused;
     uint256 public totalContributions;
@@ -68,8 +67,6 @@ contract SpaceCoinICO {
         for (uint256 i = 0; i < _whitelistAddresses.length; i++) {
             contributors[_whitelistAddresses[i]].isWhitelisted = true;
         }
-
-        treasury = _treasury;
 
         phaseContributionLimit[Status.SEED] = 15000 ether; // 15k
         phaseContributionLimit[Status.GENERAL] = 30000 ether; // 30k

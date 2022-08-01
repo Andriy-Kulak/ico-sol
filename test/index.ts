@@ -71,7 +71,8 @@ describe("Space Coin Token", function () {
       SpaceCoinICOFactory = await ethers.getContractFactory("SpaceCoinICO");
       spaceCoinICO = (await SpaceCoinICOFactory.deploy(
         [chrisWL.address, julieWL.address],
-        treasuryAddr.address
+        treasuryAddr.address,
+        deployer.address
       )) as SpaceCoinICO;
       await spaceCoinICO.deployed();
 
@@ -181,10 +182,6 @@ describe("Space Coin Token", function () {
         await expect(
           spaceCoinICO.connect(julieWL).updatePhaseStatus(Status.OPEN)
         ).to.be.revertedWith(errors.nonAdmin);
-      });
-
-      it("treasury address is set", async () => {
-        expect(await spaceCoinICO.treasury()).to.eq(treasuryAddr.address);
       });
     });
 
