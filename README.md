@@ -1,6 +1,12 @@
 # ICO Implementation (Solidity Smart Contract w/ Hardhat)
 
-### Overview
+## Main Commands (to see tests)
+
+- `npm i`
+- `npx hardhat compile`
+- `npx hardhat test`
+
+## Overview
 
 This is my personal implementation of an ICO with ERC20. Below is what I achieved:
 
