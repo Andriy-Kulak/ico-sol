@@ -48,8 +48,8 @@ This is my personal implementation of an ICO with ERC20. Below is what I achieve
 
 - my deploy script: `npx hardhat run --network goerli scripts/deploy.ts --show-stack-traces`
 - I am using goreli
-- ICO contract address: `0xB51685aEA76e250da73e17eD42268990DAC03c32`
-- ERC20 address: `0x65cecC15180a8Cd454c977f581954e836bb49157`
+- ICO contract address: (0xB51685aEA76e250da73e17eD42268990DAC03c32)[https://goerli.etherscan.io/address/0xB51685aEA76e250da73e17eD42268990DAC03c32]
+- ERC20 address: (0x65cecC15180a8Cd454c977f581954e836bb49157)[https://goerli.etherscan.io/address/0x65cecC15180a8Cd454c977f581954e836bb49157]
   - you can also get this by doing `await contract.connect(signer).scToken()` on front-end
 
 ### For Frontend
